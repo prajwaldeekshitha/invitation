@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Prajwal ❤️ Deekshitha | Wedding Invitation</title>
+
+<!-- WhatsApp / Facebook / Instagram Link Preview -->
+<meta property="og:title" content="Prajwal ❤️ Deekshitha | Invitation">
+
+<meta property="og:description" 
+content="Together with our families, we warmly invite you to celebrate our Haldi, Sangeet & Wedding ceremonies ✨ Join us for love, laughter & unforgettable memories.">
+
+<meta property="og:image" 
+content="https://yourwebsite.com/images/wedding-preview.jpg">
+
+<meta property="og:url" 
+content="https://yourwebsite.com">
+
+<meta property="og:type" content="website">
+
+<meta property="og:site_name" content="Prajwal & Deekshitha Wedding">
+
+<!-- Better Preview -->
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Mobile Theme Color -->
+<meta name="theme-color" content="#b08b3a">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Cinzel:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">  
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html,body{width:100%;height:100%;overflow:hidden;background:#f5ede0;}
+
+/* ============================================================
+   HOME PAGE — matching the uploaded image exactly
+   ============================================================ */
+#home{
+  position:fixed;inset:0;
+  overflow-y:auto;overflow-x:hidden;
+  background:#f0e8d8;
+  -webkit-overflow-scrolling:touch;
+  z-index:1;
+}
+
+/* leaf / botanical texture overlays */
+.leaf-tl{
+  position:absolute;top:-10px;left:-10px;width:200px;
+  pointer-events:none;z-index:2;opacity:0.85;
+}
+.leaf-tr{
+  position:absolute;top:-10px;right:-10px;width:180px;
+  pointer-events:none;z-index:2;opacity:0.85;
+  transform:scaleX(-1);
+}
+.leaf-bl{
+  position:absolute;bottom:80px;left:-10px;width:150px;
+  pointer-events:none;z-index:2;opacity:0.7;
+}
+.leaf-br{
+  position:absolute;bottom:60px;right:-10px;width:130px;
+  pointer-events:none;z-index:2;opacity:0.7;transform:scaleX(-1);
+}
+.ribbon-br{
+  position:absolute;bottom:0;right:0;width:120px;
+  pointer-events:none;z-index:2;opacity:0.6;
+}
+
+.home-inner{
+  position:relative;
+  min-height:100%;
+  display:flex;flex-direction:column;align-items:center;
+  padding:50px 24px 60px;
+  text-align:center;
+}
+
+/* SAVE THE DATE */
+.std-block{margin-bottom:4px;}
+.std-save{
+  font-family:'Cinzel',serif;
+  font-size:clamp(52px,14vw,78px);
+  font-weight:700;
+  color:#1e3a2f;
+  line-height:0.9;
+  letter-spacing:-1px;
+  animation:fadeDown 1s ease forwards;opacity:0;
+}
+.std-the{
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(32px,9vw,52px);
+  color:#b08b3a;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  margin:2px 0;
+  animation:fadeDown 1s 0.15s ease forwards;opacity:0;
+}
+.std-the::before,.std-the::after{
+  content:'';display:block;width:40px;height:1px;
+  background:linear-gradient(90deg,transparent,#b08b3a);
+}
+.std-the::after{background:linear-gradient(270deg,transparent,#b08b3a);}
+.std-heart{font-size:14px;color:#b08b3a;margin:0 4px;}
+.std-date{
+  font-family:'Cinzel',serif;
+  font-size:clamp(52px,14vw,78px);
+  font-weight:700;
+  color:#1e3a2f;
+  line-height:0.9;
+  letter-spacing:-1px;
+  animation:fadeDown 1s 0.25s ease forwards;opacity:0;
+}
+.for-wedding{
+  font-family:'Cinzel',serif;
+  font-size:clamp(10px,2.5vw,13px);
+  letter-spacing:4px;
+  color:#5a5040;
+  margin:14px 0 10px;
+  animation:fadeDown 1s 0.35s ease forwards;opacity:0;
+}
+.couple-names{
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(34px,9.5vw,58px);
+  color:#7a3b1e;
+  line-height:1.1;
+  animation:fadeDown 1s 0.45s ease forwards;opacity:0;
+}
+.name-amp{color:#7a3b1e;font-size:0.85em;}
+
+.ornament-row{
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  margin:10px 0 22px;
+  color:#b08b3a;font-size:13px;letter-spacing:3px;
+  animation:fadeDown 1s 0.55s ease forwards;opacity:0;
+}
+.ornament-row span{font-size:18px;}
+
+/* ============================================================
+   THREE ARCH CARDS — matching the image
+   ============================================================ */
+.cards-row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  width:100%;max-width:420px;
+  animation:fadeUp 1s 0.65s ease forwards;opacity:0;
+}
+
+.arch-card{
+  position:relative;
+  border-radius:100px 100px 12px 12px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow:0 8px 25px rgba(0,0,0,0.12);
+  display:flex;flex-direction:column;
+  border:1px solid rgba(255,255,255,0.6);
+}
+.arch-card:active{transform:scale(0.96);}
+
+/* individual card backgrounds matching the image */
+.arch-haldi{background:#f5e8ca;}
+.arch-sangeeth{background:#dde8ee;}
+.arch-wedding{background:#f0e4e0;}
+
+.card-top{
+  padding:18px 10px 12px;
+  text-align:center;
+  flex:0 0 auto;
+}
+.card-icon{
+  font-size:26px;margin-bottom:8px;display:block;
+}
+.card-date{
+  font-family:'Cinzel',serif;
+  font-size:8px;letter-spacing:2px;
+  color:#7a6a50;
+  text-transform:uppercase;
+  display:block;margin-bottom:4px;
+}
+.card-event{
+  font-family:'Cinzel',serif;
+  font-weight:700;
+  font-size:clamp(14px,4vw,18px);
+  line-height:1;
+  display:block;
+  margin-bottom:8px;
+}
+.haldi-txt{color:#8B6914;}
+.sangeeth-txt{color:#1e4a5c;}
+.wedding-txt{color:#7a3b1e;}
+
+.card-divider{
+  display:flex;align-items:center;justify-content:center;
+  color:#b08b3a;font-size:10px;margin-bottom:6px;
+  gap:4px;
+}
+.card-divider::before,.card-divider::after{
+  content:'';display:block;width:20px;height:0.5px;background:#b08b3a;opacity:0.5;
+}
+
+.venue-label{
+  font-family:'Great Vibes',cursive;
+  font-size:13px;color:#7a6a50;display:block;margin-bottom:3px;
+}
+.venue-name{
+  font-family:'Cinzel',serif;
+  font-size:7px;letter-spacing:1.5px;
+  color:#4a3a28;font-weight:600;
+  line-height:1.5;text-transform:uppercase;
+  display:block;
+}
+.card-time{
+  font-family:'Cinzel',serif;
+  font-size:7px;letter-spacing:1.5px;
+  color:#b08b3a;display:block;
+  margin-top:4px;text-transform:uppercase;
+}
+
+/* photo at bottom of arch card */
+.card-photo{
+  flex:1;min-height:110px;
+  background-size:cover;background-position:center top;
+  position:relative;
+}
+.card-photo::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:30px;
+  background:linear-gradient(to bottom,var(--card-bg),transparent);
+}
+
+.haldi-photo{
+  background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl2kNtb-WL7ifn8URcEFo9CdwDqZPAlspQ2g&s');
+  --card-bg:#f5e8ca;
+}
+.sangeeth-photo{
+  background-image:url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=600');
+  --card-bg:#dde8ee;
+}
+.wedding-photo{
+  background-image:url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=600');
+  --card-bg:#f0e4e0;
+}
+
+/* bottom tagline */
+.tagline-block{
+  margin-top:24px;
+  animation:fadeUp 1s 0.85s ease forwards;opacity:0;
+}
+.tagline-upper{
+  font-family:'Cinzel',serif;
+  font-size:9px;letter-spacing:4px;text-transform:uppercase;
+  color:#7a6a50;
+}
+.tagline-script{
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(22px,6vw,32px);
+  color:#7a3b1e;
+  display:block;margin:4px 0;
+}
+.tagline-hr{
+  width:60px;height:0.5px;
+  background:linear-gradient(90deg,transparent,#b08b3a,transparent);
+  margin:8px auto 0;
+}
+.tagline-heart{color:#b08b3a;font-size:14px;margin-top:6px;display:block;}
+
+/* ============================================================
+   EVENT PAGES
+   ============================================================ */
+.page{
+  position:fixed;inset:0;
+  z-index:50;
+  background:#f5ede0;
+  overflow-y:auto;overflow-x:hidden;
+  -webkit-overflow-scrolling:touch;
+  transform:translateY(100%);
+  transition:transform 0.6s cubic-bezier(0.25,0,0.1,1);
+}
+.page.open{transform:translateY(0);}
+
+/* hero */
+.ev-hero{
+  position:relative;
+  height:46vh;min-height:240px;
+  overflow:hidden;
+}
+.ev-hero-img{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+  transform:scale(1.06);transition:transform 0.8s ease;
+}
+.page.open .ev-hero-img{transform:scale(1);}
+.ev-hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(0,0,0,0.15) 0%,rgba(20,10,5,0.75) 100%);
+}
+.ev-hero-content{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:24px 24px 30px;
+}
+.ev-badge{
+  display:inline-block;
+  font-family:'Cinzel',serif;
+  font-size:9px;letter-spacing:3px;text-transform:uppercase;
+  color:rgba(232,200,120,0.9);
+  border:1px solid rgba(232,200,120,0.4);
+  padding:4px 14px;border-radius:2px;
+  margin-bottom:10px;
+}
+.ev-title{
+  font-family:'Cinzel',serif;
+  font-size:clamp(36px,10vw,54px);
+  font-weight:700;color:#fff;line-height:1;
+  text-shadow:0 2px 20px rgba(0,0,0,0.4);
+}
+.ev-subtitle{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:rgba(232,200,120,0.75);
+  letter-spacing:2px;margin-top:4px;
+}
+
+/* back button */
+.back-btn{
+  position:fixed;top:max(16px,env(safe-area-inset-top,16px));left:16px;
+  width:44px;height:44px;border-radius:50%;
+  background:rgba(20,10,0,0.6);
+  border:1px solid rgba(201,160,60,0.4);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;z-index:200;
+  opacity:0;pointer-events:none;
+  transition:opacity 0.3s;
+}
+.back-btn.show{opacity:1;pointer-events:all;}
+.back-btn svg{width:20px;height:20px;stroke:#C9963B;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+
+/* page body */
+.ev-body{padding:28px 20px 60px;}
+
+.ev-desc{
+  font-family:'Cormorant Garamond',serif;
+  font-size:19px;line-height:1.85;
+  color:rgba(50,25,5,0.75);
+  text-align:center;font-style:italic;
+  margin-bottom:26px;padding:0 8px;
+}
+
+.section-lbl{
+  font-family:'Cinzel',serif;
+  font-size:9px;letter-spacing:3px;text-transform:uppercase;
+  color:rgba(176,139,58,0.7);
+  margin-bottom:14px;display:block;
+}
+
+/* details card */
+.det-card{
+  background:#fff;
+  border-radius:6px;
+  border:1px solid rgba(176,139,58,0.18);
+  box-shadow:0 4px 20px rgba(0,0,0,0.06);
+  overflow:hidden;
+  margin-bottom:20px;
+}
+.det-row{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:14px 18px;
+  border-bottom:1px solid rgba(176,139,58,0.1);
+}
+.det-row:last-child{border-bottom:none;}
+.det-ico{
+  width:40px;height:40px;min-width:40px;
+  background:linear-gradient(135deg,rgba(176,139,58,0.1),rgba(176,139,58,0.04));
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:20px;
+}
+.det-lbl{
+  font-family:'Cinzel',serif;
+  font-size:8px;letter-spacing:2px;text-transform:uppercase;
+  color:rgba(100,70,30,0.5);
+}
+.det-val{
+  font-family:'Playfair Display',serif;
+  font-size:17px;font-weight:700;
+  color:#1e1005;margin-top:2px;line-height:1.3;
+}
+.det-sub{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;font-style:italic;
+  color:rgba(100,70,30,0.6);margin-top:2px;
+}
+.stars{color:#b08b3a;font-size:12px;letter-spacing:1px;margin-top:3px;}
+
+/* map */
+.map-wrap{
+  border-radius:6px;overflow:hidden;
+  border:1px solid rgba(176,139,58,0.2);
+  box-shadow:0 4px 20px rgba(0,0,0,0.08);
+  margin-bottom:16px;
+}
+.map-wrap iframe{width:100%;height:260px;border:none;display:block;}
+
+/* directions button */
+.dir-btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;padding:15px;
+  border-radius:4px;
+  font-family:'Cinzel',serif;
+  font-size:11px;letter-spacing:3px;text-transform:uppercase;
+  cursor:pointer;border:none;text-decoration:none;
+  margin-bottom:28px;
+  transition:opacity 0.2s;
+}
+.dir-btn:active{opacity:0.82;}
+.haldi-btn{background:linear-gradient(135deg,#7a5200,#a56c00);color:#ffe5a0;}
+.sangeeth-btn{background:linear-gradient(135deg,#1e3a4a,#0f5a7a);color:#b0d8ea;}
+.wedding-btn{background:linear-gradient(135deg,#5c1010,#8b1a1a);color:#f5c8b0;}
+
+/* ornament divider */
+.orn{text-align:center;color:#b08b3a;font-size:16px;letter-spacing:6px;margin:20px 0;opacity:0.6;}
+
+/* closing rsvp */
+.rsvp{
+  background:linear-gradient(135deg,#1e1005,#2d1a08);
+  border-radius:6px;padding:26px 20px;text-align:center;
+  border:1px solid rgba(176,139,58,0.25);
+}
+.rsvp-title{
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(24px,7vw,36px);
+  color:#e8c87a;margin-bottom:6px;
+}
+.rsvp-sub{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-style:italic;
+  color:rgba(232,200,120,0.5);letter-spacing:1px;
+}
+
+.arch-card{
+  position:relative;
+  border-radius:100px 100px 12px 12px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow:0 8px 25px rgba(0,0,0,0.12);
+  display:flex;flex-direction:column;
+  border:2.5px solid rgba(255,255,255,0.85);
+  outline:2px solid rgba(176,139,58,0.45);
+  outline-offset:-3px;
+  
+}
+.arch-card:nth-child(2){animation-delay:0.4s;}
+.arch-card:nth-child(3){animation-delay:0.8s;}
+.arch-card:active{transform:scale(0.96);}
+
+/* hero images per page */
+.haldi-hero-img{background-image:url('https://www.marriagecolours.com/wp-content/uploads/2024/09/HomeDecor-Haldi_Floral-Hangings-Stage.jpg');}
+.sangeeth-hero-img{background-image:url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200');}
+.wedding-hero-img{background-image:url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200');}
+
+/* animations */
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-16px);}
+  to{opacity:1;transform:translateY(0);}
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(18px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+.pool-notice{
+  position:relative;
+  background:linear-gradient(135deg,#fff8e8,#fff3d6);
+  border-radius:16px;
+  padding:22px 20px 20px;
+  margin-bottom:24px;
+  text-align:center;
+  overflow:hidden;
+}
+.pool-notice::before{
+  content:'';
+  position:absolute;inset:0;
+  border-radius:16px;
+  padding:2px;
+  background:linear-gradient(135deg,#f5c842,#e8a020,#f5c842,#b08b3a);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  pointer-events:none;
+}
+.pool-notice-tag{
+  display:inline-block;
+  font-family:'Cinzel',serif;
+  font-size:8px;letter-spacing:3px;text-transform:uppercase;
+  color:#8B6914;
+  background:#f5d878;
+  padding:4px 14px;border-radius:20px;
+  margin-bottom:12px;
+}
+.pool-notice-emoji{
+  font-size:32px;display:block;margin-bottom:8px;
+}
+.pool-notice-title{
+  font-family:'Cinzel',serif;
+  font-size:clamp(15px,4.5vw,20px);
+  font-weight:700;
+  color:#7a5200;
+  letter-spacing:1px;
+  margin-bottom:10px;
+}
+.pool-notice-text{
+  font-family:'Cormorant Garamond',serif;
+  font-size:17px;line-height:1.75;
+  color:#4a3010;
+  font-style:italic;
+}
+.pool-notice-text strong{
+  font-style:normal;
+  color:#8B4500;
+  font-weight:700;
+}
+.pool-notice-divider{
+  display:flex;align-items:center;gap:8px;
+  justify-content:center;
+  margin:12px 0;
+  color:#b08b3a;font-size:12px;
+}
+.pool-notice-divider::before,.pool-notice-divider::after{
+  content:'';display:block;
+  width:30px;height:1px;
+  background:linear-gradient(90deg,transparent,#b08b3a);
+}
+.pool-notice-divider::after{background:linear-gradient(270deg,transparent,#b08b3a);}
+.pool-must{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:'Cinzel',serif;
+  font-size:9px;letter-spacing:2px;text-transform:uppercase;
+  color:#8B6914;
+  background:#fff;
+  border:1px dashed #c8a030;
+  border-radius:6px;
+  padding:6px 14px;
+  margin-top:8px;
+}
+
+/* leaf SVG fallback flowers */
+.leaf-svg{position:absolute;pointer-events:none;z-index:2;}
+
+.card-icon img{
+  width:60px;
+  height:60px;
+  object-fit:contain;
+}
+
+.arch-card::after{
+  content:'OPEN INVITATION';
+  display:block;
+  width:90%;
+  margin:8px auto 10px;
+  padding:6px 0;
+
+  font-family:'Cinzel',serif;
+  font-size:6.5px;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  text-align:center;
+  white-space:nowrap;
+
+  color:#2d1f16;
+  background:rgba(85,60,40,0.08);
+  border:1px solid rgba(85,60,40,0.15);
+  border-radius:20px;
+  box-sizing:border-box;
+}
+
+.arch-card:active::after{
+  background:#5c4033;
+  color:#fff;
+}
+
+
+
+/* scrollbar */
+#home::-webkit-scrollbar,.page::-webkit-scrollbar{width:3px;}
+#home::-webkit-scrollbar-thumb,.page::-webkit-scrollbar-thumb{background:rgba(176,139,58,0.35);border-radius:99px;}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     HOME PAGE — replicating the uploaded invitation image
+     ============================================================ -->
+<div id="home">
+
+  <!-- Botanical corners using inline SVG -->
+  <!-- Top Left leaves -->
+  <svg class="leaf-svg" style="top:-5px;left:-5px;width:210px;height:200px;" viewBox="0 0 210 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.82">
+      <!-- large leaves -->
+      <path d="M10 180 Q40 80 130 20" stroke="#2d5a3d" stroke-width="2" fill="none"/>
+      <path d="M130 20 Q90 60 50 140 Q30 170 10 180" fill="#3a7a4a" opacity="0.7"/>
+      <path d="M20 175 Q55 90 140 30" stroke="#2d5a3d" stroke-width="1.5" fill="none"/>
+      <path d="M140 30 Q100 65 65 140 Q45 168 20 175" fill="#4a9a5a" opacity="0.55"/>
+      <path d="M5 160 Q50 110 100 50 Q120 30 150 10" stroke="#2d5a3d" stroke-width="1" fill="none"/>
+      <path d="M150 10 Q110 40 75 100 Q50 140 5 160" fill="#5aaa6a" opacity="0.45"/>
+      <!-- small branch -->
+      <path d="M60 5 Q75 30 95 50" stroke="#3a6a3a" stroke-width="1.5" fill="none"/>
+      <ellipse cx="85" cy="35" rx="14" ry="7" fill="#4a8a4a" opacity="0.65" transform="rotate(-30 85 35)"/>
+      <ellipse cx="100" cy="55" rx="12" ry="6" fill="#5aaa5a" opacity="0.55" transform="rotate(-20 100 55)"/>
+      <!-- white fluffy flower -->
+      <circle cx="45" cy="10" r="8" fill="white" opacity="0.9"/>
+      <circle cx="38" cy="14" r="6" fill="white" opacity="0.8"/>
+      <circle cx="52" cy="6" r="5" fill="white" opacity="0.75"/>
+      <circle cx="30" cy="8" r="5" fill="white" opacity="0.7"/>
+      <circle cx="44" cy="10" r="3" fill="#f5d090" opacity="0.9"/>
+      <!-- pampas/reeds top right -->
+      <path d="M170 0 Q168 40 162 70" stroke="#c8a86a" stroke-width="1.5" fill="none"/>
+      <ellipse cx="165" cy="30" rx="20" ry="7" fill="#d4b878" opacity="0.5" transform="rotate(10 165 30)"/>
+      <ellipse cx="160" cy="50" rx="18" ry="6" fill="#c8a86a" opacity="0.45" transform="rotate(8 160 50)"/>
+      <ellipse cx="185" cy="15" rx="22" ry="7" fill="#d4b878" opacity="0.4" transform="rotate(20 185 15)"/>
+    </g>
+  </svg>
+
+  <!-- Top Right leaves -->
+  <svg class="leaf-svg" style="top:-5px;right:-5px;width:210px;height:200px;transform:scaleX(-1);" viewBox="0 0 210 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.82">
+      <path d="M10 180 Q40 80 130 20" stroke="#2d5a3d" stroke-width="2" fill="none"/>
+      <path d="M130 20 Q90 60 50 140 Q30 170 10 180" fill="#3a7a4a" opacity="0.7"/>
+      <path d="M20 175 Q55 90 140 30" stroke="#2d5a3d" stroke-width="1.5" fill="none"/>
+      <path d="M140 30 Q100 65 65 140 Q45 168 20 175" fill="#4a9a5a" opacity="0.55"/>
+      <path d="M5 160 Q50 110 100 50 Q120 30 150 10" stroke="#2d5a3d" stroke-width="1" fill="none"/>
+      <path d="M150 10 Q110 40 75 100 Q50 140 5 160" fill="#5aaa6a" opacity="0.45"/>
+      <path d="M60 5 Q75 30 95 50" stroke="#3a6a3a" stroke-width="1.5" fill="none"/>
+      <ellipse cx="85" cy="35" rx="14" ry="7" fill="#4a8a4a" opacity="0.65" transform="rotate(-30 85 35)"/>
+      <ellipse cx="100" cy="55" rx="12" ry="6" fill="#5aaa5a" opacity="0.55" transform="rotate(-20 100 55)"/>
+      <circle cx="45" cy="10" r="8" fill="white" opacity="0.9"/>
+      <circle cx="38" cy="14" r="6" fill="white" opacity="0.8"/>
+      <circle cx="52" cy="6" r="5" fill="white" opacity="0.75"/>
+      <circle cx="30" cy="8" r="5" fill="white" opacity="0.7"/>
+      <circle cx="44" cy="10" r="3" fill="#f5d090" opacity="0.9"/>
+      <path d="M170 0 Q168 40 162 70" stroke="#c8a86a" stroke-width="1.5" fill="none"/>
+      <ellipse cx="165" cy="30" rx="20" ry="7" fill="#d4b878" opacity="0.5" transform="rotate(10 165 30)"/>
+      <ellipse cx="160" cy="50" rx="18" ry="6" fill="#c8a86a" opacity="0.45" transform="rotate(8 160 50)"/>
+      <ellipse cx="185" cy="15" rx="22" ry="7" fill="#d4b878" opacity="0.4" transform="rotate(20 185 15)"/>
+    </g>
+  </svg>
+
+  <!-- Bottom Left flowers -->
+  <svg class="leaf-svg" style="bottom:50px;left:-5px;width:160px;height:160px;" viewBox="0 0 160 160" fill="none">
+    <circle cx="50" cy="120" r="16" fill="white" opacity="0.9"/>
+    <circle cx="35" cy="110" r="12" fill="white" opacity="0.85"/>
+    <circle cx="65" cy="108" r="10" fill="white" opacity="0.8"/>
+    <circle cx="45" cy="96" r="9" fill="white" opacity="0.75"/>
+    <circle cx="50" cy="120" r="5" fill="#f5d090" opacity="0.9"/>
+    <circle cx="35" cy="110" r="4" fill="#f5d090" opacity="0.85"/>
+    <path d="M5 155 Q30 120 70 90" stroke="#2d5a3d" stroke-width="1.5" fill="none"/>
+    <ellipse cx="40" cy="115" rx="18" ry="7" fill="#4a8a5a" opacity="0.4" transform="rotate(20 40 115)"/>
+  </svg>
+
+  <!-- Bottom Right ribbon -->
+  <svg class="leaf-svg" style="bottom:0;right:0;width:130px;height:150px;" viewBox="0 0 130 150" fill="none">
+    <path d="M130 150 Q100 120 80 80 Q70 60 90 40" stroke="#e8c8a0" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M130 150 Q110 115 95 80 Q88 62 100 42" stroke="#d4b080" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.4"/>
+    <path d="M130 135 Q108 108 95 72 Q90 55 105 38" stroke="#f0d8b0" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.35"/>
+  </svg>
+
+  <div class="home-inner">
+    <div class="std-block">
+      <div class="std-save">SAVE</div>
+      <div class="std-the"><span class="std-heart">♥</span>the<span class="std-heart">♥</span></div>
+      <div class="std-date">DATE</div>
+    </div>
+
+    <div class="for-wedding">FOR THE WEDDING OF</div>
+
+    <div class="couple-names">
+      Prajwal <span class="name-amp">&amp;</span> Deekshitha
+    </div>
+
+    <div class="ornament-row">
+      <span>›</span><span>›</span><span>›</span>
+      <span style="font-size:20px">♡</span>
+      <span>‹</span><span>‹</span><span>‹</span>
+    </div>
+
+    <!-- THREE ARCH CARDS -->
+    <div class="cards-row">
+
+      <!-- HALDI -->
+      <div class="arch-card arch-haldi" onclick="openPage('pg-haldi')">
+        <div class="card-top">
+          <span class="card-icon">
+    <img src="haldi-icon.png" alt="Pool Icon">
+</span>
+          <span class="card-date">DEC 12TH 2026</span>
+          <span class="card-event haldi-txt">HALDI</span>
+          <div class="card-divider"><span>♡</span></div>
+          <span class="venue-label">Venue</span>
+          <span class="venue-name">ORO Beachstay<br>Mangalore</span>
+          <span class="card-time">11AM Onwards</span>
+        </div>
+        <div class="card-photo haldi-photo"></div>
+      </div>
+
+      <!-- SANGEETH -->
+      <div class="arch-card arch-sangeeth" onclick="openPage('pg-sangeeth')">
+        <div class="card-top">
+          <span class="card-icon">
+             <img src="sangeeth-icon.png" alt="Pool Icon">
+          </span>
+          <span class="card-date">DEC 12TH 2026</span>
+          <span class="card-event sangeeth-txt">SANGEETH</span>
+          <div class="card-divider"><span>♡</span></div>
+          <span class="venue-label">Venue</span>
+          <span class="venue-name">Boloor Bay<br>Mangalore</span>
+          <span class="card-time">7PM Onwards</span>
+        </div>
+        <div class="card-photo sangeeth-photo"></div>
+      </div>
+
+      <!-- WEDDING -->
+      <div class="arch-card arch-wedding" onclick="openPage('pg-wedding')">
+        <div class="card-top">
+          <span class="card-icon">
+          <img src="wedding-icon.png" alt="Pool Icon">
+          </span>
+          <span class="card-date">DEC 14TH 2026</span>
+          <span class="card-event wedding-txt">WEDDING</span>
+          <div class="card-divider"><span>♡</span></div>
+          <span class="venue-label">Venue</span>
+          <span class="venue-name">Indiana Convention<br>Center, Mangalore</span>
+          <span class="card-time">10AM Onwards</span>
+        </div>
+        <div class="card-photo wedding-photo"></div>
+      </div>
+
+    </div>
+
+    <div class="tagline-block">
+      <div class="tagline-upper">THREE EVENTS. ONE CELEBRATION.</div>
+      <span class="tagline-script">A lifetime of togetherness.</span>
+      <div class="tagline-hr"></div>
+      <span class="tagline-heart">♡</span>
+    </div>
+  </div>
+</div>
+
+<!-- BACK BUTTON -->
+<button class="back-btn" id="backBtn" onclick="closePage()" aria-label="Go back">
+  <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+</button>
+
+<!-- ============================================================
+     HALDI PAGE
+     ============================================================ -->
+<div class="page" id="pg-haldi">
+  <div class="ev-hero">
+    <div class="ev-hero-img haldi-hero-img"></div>
+    <div class="ev-hero-overlay"></div>
+    <div class="ev-hero-content">
+      <span class="ev-badge">December 12, 2026 · 11:00 AM</span>
+      <div class="ev-title">HALDI</div>
+      <div class="ev-subtitle">Ceremony of Blessings</div>
+    </div>
+  </div>
+
+  <div class="ev-body">
+  
+    <p class="ev-desc">
+      Begin the wedding festivities with the vibrant Haldi ceremony —
+      blessings, golden joy, and a whole lot of splashing fun by the beautiful seaside.
+    </p>
+
+    
+    <span class="section-lbl">Event Details</span>
+    <div class="det-card">
+      <div class="det-row">
+        <div class="det-ico">📅</div>
+        <div>
+          <div class="det-lbl">Date</div>
+          <div class="det-val">Friday, December 12, 2026</div>
+        </div>
+      </div>
+      <div class="det-row">
+        <div class="det-ico">🕚</div>
+        <div>
+          <div class="det-lbl">Time</div>
+          <div class="det-val">11:00 AM Onwards</div>
+        </div>
+      </div>
+      <div class="det-row">
+        <div class="det-ico">📍</div>
+        <div>
+          <div class="det-lbl">Venue</div>
+          <div class="det-val">ORO Beachstay, Mangalore</div>
+          <div class="det-sub">Someshwar Village, Ullal, Karnataka 575022</div>
+        </div>
+      </div>
+     
+    </div>
+
+    <span class="section-lbl">Location</span>
+    <div class="map-wrap">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3698.3455610196793!2d74.85144637483812!3d12.787456687511245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35d001b577323%3A0x7d43cff682e50233!2sORO%20BEACHSTAY%20MANGALORE!5e1!3m2!1sen!2sin!4v1780477902006!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <a class="dir-btn haldi-btn" href="https://maps.google.com/?q=ORO+Beachstay+Mangalore+Ullal" target="_blank">
+      🗺 &nbsp; Get Directions
+    </a>
+
+    <!-- POOL PARTY NOTICE -->
+    <div class="pool-notice">
+      <div class="pool-notice-tag">✦ Special Note ✦</div>
+      <span class="pool-notice-emoji">🌊🌿</span>
+      <div class="pool-notice-title">HALDI &amp; POOL PARTY</div>
+      <div class="pool-notice-text">
+        After the blessings, we're diving straight into the fun!<br><br>
+        Dress Code for Pool Party<br>
+        <strong>Pool / Beach Outfit</strong><br><br>
+       Get ready to go golden, dive into fun,<br>
+       and make unforgettable splashy memories!
+      </div>
+      <div class="pool-notice-divider">🌺</div>
+      <div class="pool-must">
+        👜 &nbsp; Don't forget your swimwear!
+      </div>
+    </div>
+
+
+    <div class="orn">— ♡ —</div>
+    <div class="rsvp">
+      <div class="rsvp-title">Join us in celebration</div>
+      <div class="rsvp-sub">A touch of turmeric · A shower of blessings</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     SANGEETH PAGE
+     ============================================================ -->
+<div class="page" id="pg-sangeeth">
+  <div class="ev-hero">
+    <div class="ev-hero-img sangeeth-hero-img"></div>
+    <div class="ev-hero-overlay"></div>
+    <div class="ev-hero-content">
+      <span class="ev-badge">December 12, 2026 · 7:00 PM</span>
+      <div class="ev-title">SANGEETH</div>
+      <div class="ev-subtitle">Night of Music & Dance</div>
+    </div>
+  </div>
+
+  <div class="ev-body">
+    <p class="ev-desc">
+      An unforgettable evening of music, dance and celebration awaits.
+      Come together to enjoy performances, create memories and
+      celebrate the joyous union of two families.
+    </p>
+
+    <span class="section-lbl">Event Details</span>
+    <div class="det-card">
+      <div class="det-row">
+        <div class="det-ico">📅</div>
+        <div>
+          <div class="det-lbl">Date</div>
+          <div class="det-val">Friday, December 12, 2026</div>
+        </div>
+      </div>
+      <div class="det-row">
+        <div class="det-ico">🕖</div>
+        <div>
+          <div class="det-lbl">Time</div>
+          <div class="det-val">7:00 PM Onwards</div>
+        </div>
+      </div>
+      <div class="det-row">
+        <div class="det-ico">📍</div>
+        <div>
+          <div class="det-lbl">Venue</div>
+          <div class="det-val">Boloor Bay, Mangalore</div>
+          <div class="det-sub">Boloor, Mangaluru, Karnataka</div>
+        </div>
+      </div>
+    </div>
+
+    <span class="section-lbl">Location</span>
+    <div class="map-wrap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.2801630115555!2d74.81622017801635!3d12.889698054976838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35a8c70ad2007%3A0x1c383a5ea4f3b5ab!2sSultan%20Bathery!5e0!3m2!1sen!2sin!4v1780477764011!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <a class="dir-btn sangeeth-btn" href="https://maps.app.goo.gl/UeGmwgjzhEh6YGSG8" target="_blank">
+      🗺 &nbsp; Get Directions
+    </a>
+
+    <div class="orn">— ♡ —</div>
+    <div class="rsvp">
+      <div class="rsvp-title">Dance the night away</div>
+      <div class="rsvp-sub">Dance, music and endless memorie</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     WEDDING PAGE
+     ============================================================ -->
+<div class="page" id="pg-wedding">
+  <div class="ev-hero">
+    <div class="ev-hero-img wedding-hero-img"></div>
+    <div class="ev-hero-overlay"></div>
+    <div class="ev-hero-content">
+      <span class="ev-badge">December 14, 2026 · 10:00 AM</span>
+      <div class="ev-title">WEDDING</div>
+      <div class="ev-subtitle">Sacred Union Ceremony</div>
+    </div>
+  </div>
+
+  <div class="ev-body">
+    <p class="ev-desc">
+      With the blessings of our families and loved ones,
+      we invite you to witness our sacred wedding ceremony
+      as we begin a new chapter and celebrate a lifetime of love.
+    </p>
+
+    <span class="section-lbl">Event Details</span>
+    <div class="det-card">
+      <div class="det-row">
+        <div class="det-ico">📅</div>
+        <div>
+          <div class="det-lbl">Date</div>
+          <div class="det-val">Sunday, December 14, 2026</div>
+        </div>
+      </div>
+      <div class="det-row">
+        <div class="det-ico">🕙</div>
+        <div>
+          <div class="det-lbl">Time</div>
+          <div class="det-val">10:00 AM Onwards</div>
+        </div>
+      </div>
+      <div class="det-row">
+        <div class="det-ico">📍</div>
+        <div>
+          <div class="det-lbl">Venue</div>
+          <div class="det-val">Indiana Convention Center</div>
+          <div class="det-sub">Jeppinamogaru, Mangaluru, Karnataka 575002</div>
+        </div>
+      </div>
+      
+    </div>
+
+    <span class="section-lbl">Location</span>
+    <div class="map-wrap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.832272141919!2d74.86407927483926!3d12.854107587450569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35b9f07ef1f07%3A0x8fe4cfe13b636e12!2sINDIANA%20CONVENTION%20CENTER!5e0!3m2!1sen!2sin!4v1780390489857!5m2!1sen!2sin" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <a class="dir-btn wedding-btn" href="https://maps.google.com/?q=Indiana+Convention+Center+Mangaluru" target="_blank">
+      🗺 &nbsp; Get Directions
+    </a>
+
+    <div class="orn">— ♡ —</div>
+    <div class="rsvp">
+      <div class="rsvp-title">Witness our forever begin</div>
+       <div class="rsvp-sub">Your presence is our greatest blessing</div>
+    </div>
+  </div>
+</div>
+
+<script>
+var current = null;
+
+function openPage(id) {
+  var pg = document.getElementById(id);
+  if (current) current.classList.remove('open');
+  pg.classList.add('open');
+  pg.scrollTop = 0;
+  current = pg;
+  document.getElementById('backBtn').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closePage() {
+  if (current) { current.classList.remove('open'); current = null; }
+  document.getElementById('backBtn').classList.remove('show');
+}
+</script>
+</body>
+</html>
